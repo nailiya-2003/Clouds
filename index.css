@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.banner {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url('https://kartinkin.net/pics/uploads/posts/2022-07/1658677662_64-kartinkin-net-p-ostrov-kaiman-grandi-priroda-krasivo-foto-68.jpg');
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner #text {
+    position: relative;
+    font-size: 12rem;
+    color: #fff;
+}
+.banner .clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+.banner .clouds img {
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    animation: animate calc(3s * var(--i)) linear infinite;
+}
+section {
+    position: relative;
+    padding: 75px 100px;
+}
+section h2 {
+    position: relative;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+@keyframes animate  
+{
+    0% 
+    {
+        opacity: 0;
+        transform: scale(1);
+    }
+    25%, 75% 
+    {
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(3);
+    }
+}
